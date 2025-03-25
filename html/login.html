@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'"
+        />
+        <meta
+          http-equiv="X-Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/fonts/icons/assign-font/assign-font-to-icon.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../styles/loginStyle.css">
+        <link rel="stylesheet" href="../styles/fonts.css">
+    </head>
+<body>
+    <div id="container top-bar"></div>
+    <div class="container-fluid bg-container"></div>
+
+    <div class="container-fluid content-container">
+      <div class="container-fluid titulo-container">
+        <h1 id="up">¡NINO</h1>
+        <h1 id="down">esta feliz de verte!</h1>
+      </div>
+      <div class="container-fluid login-container">
+        <div class="container-fluid login-container-left-row">
+          <div class="container-fluid card-container-left-row">
+            <div class="card card-left-row">
+              <div class="card-tittle">
+                <h1>Iniciar Sesión</h1>
+              </div>
+                <form method="post" action="" class="form-container">
+                  <div class="user-pswd">
+                    <img src="../images/logos/usuario.png" alt="usuario" id="icons">
+                    <input type="email" class="form-control" placeholder="Email" id="usuario" required>
+                  </div>
+                  <div class="user-pswd">
+                    <img src="../images/logos/candado.png" alt="pswd" id="icons">
+                    <input type="password" class="form-control" placeholder="Contraseña" id="password">
+                  </div>
+                  <button class="btnIngresar">Ingresar</button>
+                </form>
+                <div class="container-contact">
+                  <h3 class="contacto">¿Algun problema?</h3>
+                  <h3 class="contacto" id="contact">Contactanos</h3>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid login-container-right-row">
+          <div class="container-fluid tittle-newSesion">
+            <h2 id="tittle-newSesion">¿Aun no tienes cuenta?</h2>
+          </div>
+          <img src="../images/topos/topo-1.png" alt="topo-1" id="topo-1">
+          <div class="container-fluid container-btnRegister">
+            <a href="newSesion.html"><button id="btnRegister">Registrate</button></a>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  
+    <script src="../js/extras/topbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Pirata</title>
+    <style>
+        .button {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(44, 178, 255);
+            border-radius: 50%;
+            position: absolute;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="buttonContainer"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            localStorage.removeItem("buttonPositions"); // Limpiar localStorage en cada carga para reiniciar posiciones
+            generateButtons();
+        });
+
+        function generateButtons() {
+            const container = document.getElementById("buttonContainer");
+            const numButtons = 14;
+            const positions = [
+                { left: 0, top: 300 }, //1
+                { left: 350, top: 100 }, //2
+                { left: 650, top: 250 }, //3
+                { left: 900, top: 90 }, //4
+                { left: 1200, top: 210 }, //5
+                { left: 1100, top: 450 }, //6
+                { left: 800, top: 520 }, //7
+                { left: 400, top: 480 }, //8
+                { left: 100, top: 600 }, //9
+                { left: 400, top: 700 }, //10
+                { left: 700, top: 750 }, //11
+                { left: 1100, top: 700 }, //12
+            ];
+
+            // Crear botones en las posiciones especificadas
+            for (let i = 0; i < positions.length; i++) {
+                const pos = positions[i];
+                const button = document.createElement("button");
+                button.className = "button";
+                button.style.left = `${pos.left}px`;
+                button.style.top = `${pos.top}px`;
+                button.textContent = i + 1;
+                button.onclick = () => alert(`Botón ${i + 1} presionado`);
+                container.appendChild(button);
+            }
+
+            // Conectar las bolas con líneas
+            for (let i = 0; i < positions.length - 1; i++) {
+                const pos1 = positions[i];
+                const pos2 = positions[i + 1];
+                drawLine(container, pos1, pos2);
+            }
+        }
+
+        function drawLine(container, pos1, pos2) {
+            const line = document.createElement("div");
+            line.className = "line";
+            const dx = pos2.left - pos1.left;
+            const dy = pos2.top - pos1.top;
+            const length = Math.sqrt(dx * dx + dy * dy);
+            const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+            line.style.width = `${length}px`;
+            line.style.left = `${pos1.left + 30}px`;  // Ajuste para centrar la línea en el botón
+            line.style.top = `${pos1.top + 30}px`;   // Ajuste para centrar la línea en el botón
+            line.style.transform = `rotate(${angle}deg)`;
+            container.appendChild(line);
+        }
+    </script>
+</body>
+</html>

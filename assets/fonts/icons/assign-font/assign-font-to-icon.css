@@ -1,0 +1,35 @@
+@import url(../import-font/fonts.css);
+
+:root{
+    --prymary-color: #00a2ff;
+    --secondary-color: #0c359e;
+}
+
+
+[data-icon]:before {
+    font-family: 'index-icons';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 150px;
+    color: var(--prymary-color);
+    content: attr(data-icon);
+}
+
+#right-arrow:before {
+    font-size:50px;
+}
+
+[newSesion-icons]:before {
+    font-family: 'newSesion-icons';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 80px;
+    color: white;
+    content: attr(newSesion-icons);
+}

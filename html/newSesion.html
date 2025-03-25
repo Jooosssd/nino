@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/newSesionStyle.css">
+    <link rel="stylesheet" href="../assets/fonts/icons/assign-font/assign-font-to-icon.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <title>Registrarse</title>
+</head>
+<body>
+    <div id="container top-bar"></div>
+    <div class="bg-container"></div>
+
+    <div class="container-fluid main-container">
+      <div class="container-fluid left-row-to-login">
+        <h1>¿Ya tienes cuenta?</h1>
+        <img src="../images/topos/topo-1.png" alt="topo-1" id="topo-1">
+        <a href="login.html" class="btnLogin"><button id="btnLogin">Iniciar Sesion</button></a>
+      </div>
+      <div class="container-fluid right-row-register">
+        <div class="container-fluid tittle-register">
+          <h1 id="up">¡Unete a</h1>
+          <h1 id="down">NINO!</h1>
+        </div>
+        
+          <form id="registerForm" class="form-content-container">
+            <div class="container-fluid left-row-profile rows">
+              <h2 class="subtittles">Perfil</h2>
+              <div class="container-fluid cards" id="profile-card">
+                <div class="user-image-container">
+                  <img src="../images/logos/usuario.png" alt="user">
+                </div>
+                <div class="age-gender-container">
+                  <div class="age-container">
+                    <h2>Edad</h2>
+                    <input type="number" name="age" id="age-input" required>
+                  </div>
+                  <div class="gender-container">
+                    <h2>Genero</h2>
+                    <div class="label-input-container">
+                      <div class="label-input-male-row">
+                        <input type="radio" name="gender" id="male-gender" value="M" required>
+                        <label for="male">Topo</label>
+                      </div>
+                      <div class="label-input-female-row">
+                        <input type="radio" name="gender" id="female-gender" value="F" required>
+                        <label for="female">Topa</label>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="country-container">
+                  <h2>Pais</h2>
+                  <select name="country" id="country" required>
+                    <option value="mexico">Mexico</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid right-row-register rows">
+              <h2 class="subtittles">Registro</h2>
+              <div class="container-fluid cards" id="register-card">
+                <div class="containers-register">
+                  <span class="icon" newSesion-icons="c"></span>
+                  <input type="text" name="name" class="input-register" placeholder="Nombre de usuario" required>
+                </div>
+                <div class="containers-register">
+                  <span class="icon" newSesion-icons="a"></span>
+                  <input type="email" name="email" class="input-register" placeholder="Correo" required>
+                </div>
+                <div class="containers-register">
+                  <span class="icon" newSesion-icons="b"></span>
+                  <input type="password" name="password" class="input-register" placeholder="Contraseña" required>
+                </div>
+              </div>
+            </div>
+          </form>
+          
+        <div class="container-fluid register-button-container">
+          <input type="submit" value="Registrarse" class="register-button" onclick="submitForm(event)">
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/extras/topbar.js"></script>
+    <script src="../js/submitForm.js"></script>
+</body>
+</html>

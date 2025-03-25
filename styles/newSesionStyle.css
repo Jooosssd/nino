@@ -1,0 +1,280 @@
+:root{
+    --prymary-color: #00a2ff;
+    --secondary-color: #0c359e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 200;
+}
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+    background: url(../images/backgrounds/svg/bg-newSesion.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+}
+
+.bg-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.main-container{
+    height: 100%;
+    display: flex;
+}
+
+.left-row-to-login{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 0px;
+    color: white;
+}
+
+.right-row-register{
+    width: 70%;
+}
+
+.right-row-register .tittle-register{
+    font-size: 26px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+
+.right-row-register .form-content-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+    margin-left: 40px;
+}
+
+.right-row-register .form-content-container .rows{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 20px 0px;
+}
+
+
+.right-row-register .form-content-container .cards{
+    width: 514px;
+    height: 623px;
+    background: var(--prymary-color);
+    border-radius: 23px;
+    border: 5px solid var(--secondary-color);
+}
+
+#profile-card .user-image-container{
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-card .age-gender-container{
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.age-container, .gender-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 0px;
+}
+
+.gender-container .label-input-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 0px;
+}
+
+.label-input-container .label-input-male-row{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-input-container .label-input-female-row{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-card .country-container{
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 0px;
+}
+
+.containers-register{
+    width: 100%;
+    height: 30.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 0px;
+}
+
+.containers-register .input-register{
+    width: 350px;
+    height: 40px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.register-button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-button-container .register-button{
+    width: 226px;
+    height: 45px;
+    background: none;
+    color: var(--prymary-color);
+    border: 3px solid var(--prymary-color);
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+.left-row-to-login #topo-1{
+    width: 300px;
+}
+
+.left-row-to-login #btnLogin{
+    width: 226px;
+    height: 45px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#profile-card{
+    background: rgba(0, 162, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: large;
+}
+
+.age-container #age-input{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background: var(--secondary-color);
+    opacity: 0.5;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.subtittles{
+    font-family: 'subtitles-font';
+    font-size: 46px;
+}
+
+h2{
+    font-family: 'subtitles-font';
+}
+
+::placeholder{
+    color: white;
+}
+
+#up{
+    font-family: 'subtitles-font';
+    padding-right: 100px;
+}
+
+#down{
+    font-size: 70px;
+    font-family: 'NINO-font';
+    padding-left: 200px;
+    color: var(--prymary-color);
+}
+
+.register-button:hover{
+    background: var(--prymary-color);
+    color: white;
+    border: none;
+    animation: expand 1s ease-in;
+}
+
+#btnLogin:hover{
+    background: white;
+    color: var(--prymary-color);
+    border: none;
+    animation: time 1s ease-in-out;
+}
+
+@keyframes time{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

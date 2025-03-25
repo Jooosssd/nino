@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'subtitles-font';
+    src: url('../assets/fonts/Ompalumpa.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NINO-font';
+    src: url('../assets/fonts/nino-font.woff2') format('woff2');
+}
